@@ -1,0 +1,37 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "API Gateway",
+        "description": "API Gateway for managing customers and companies."
+    },
+    "host": "localhost:4000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/graphql": {
+            "post": {
+                "summary": "GraphQL API",
+                "description": "Handle all GraphQL requests.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "query",
+                        "description": "GraphQL query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}
